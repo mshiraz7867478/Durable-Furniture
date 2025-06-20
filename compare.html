@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Products - Durable Furnitures</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    </style>
+    <link rel="stylesheet" href="style.css">
+  
+        <style>
+        .compare-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+        }
+        
+        .btn-compare {
+            background-color: #d4af37;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><i class="fas fa-couch me-2"></i>Durable
+                    <span>Furnitures</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Collections
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Collections.html">All Collection</a></li>
+                                <li><a class="dropdown-item" href="beds.html">Beds</a></li>
+                                <li><a class="dropdown-item" href="table and chairs.html">Tables and Chairs </a></li>
+                                <li><a class="dropdown-item" href="sofa set.html">Sofa sets</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Brands
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="brand.html" data-brand="all">All Brands</a></li>
+                                <li><a class="dropdown-item" href="durian.Html" data-brand="durian">Durian</a></li>
+                                <li><a class="dropdown-item" href="woods and woods.html" data-brand="ikea">Woods and
+                                        Woods</a></li>
+                                <li><a class="dropdown-item" href="first.html" data-brand="ashley">First Log</a></li>
+                                <li><a class="dropdown-item" href="twiggers.html" data-brand="lazboy">Twiggers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="compare.html">Compare</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+     <!-- Compare Hero Section -->
+    <section id="compare-hero">
+        <div class="container">
+            <div class="compare-hero-content">
+                <h1>Make the Right Choice</h1>
+                <p>Compare our premium furniture side-by-side to find the perfect match for your home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Section -->
+    <div class="container">
+        <div class="compare-container">
+            <h2 class="text-center mb-4">Compare Products</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="form-select mb-3" id="product1">
+                        <option value="">Select First Product</option>
+                        <option value="sofa">Luxury Sofa</option>
+                        <option value="bed">Modern Bed</option>
+                    </select>
+                    
+                    <div class="product-card" id="card1" style="display:none;">
+                        <img id="img1" class="product-img mb-3" src="">
+                        <h3 id="name1"></h3>
+                        <p><strong>Price:</strong> <span id="price1"></span></p>
+                        <p><strong>Material:</strong> <span id="material1"></span></p>
+                        <p><strong>Warranty:</strong> <span id="warranty1"></span></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <select class="form-select mb-3" id="product2">
+                        <option value="">Select Second Product</option>
+                        <option value="sofa">Luxury Sofa</option>
+                        <option value="bed">Modern Bed</option>
+                    </select>
+                    
+                    <div class="product-card" id="card2" style="display:none;">
+                        <img id="img2" class="product-img mb-3" src="">
+                        <h3 id="name2"></h3>
+                        <p><strong>Price:</strong> <span id="price2"></span></p>
+                        <p><strong>Material:</strong> <span id="material2"></span></p>
+                        <p><strong>Warranty:</strong> <span id="warranty2"></span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-3">
+                <button class="btn btn-compare" onclick="compare()">Compare</button>
+            </div>
+            
+            <div id="result" class="mt-4" style="display:none;">
+                <h4 class="text-center">Comparison Result</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th id="resultName1"></th>
+                            <th id="resultName2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Price</td>
+                            <td id="resultPrice1"></td>
+                            <td id="resultPrice2"></td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td id="resultMaterial1"></td>
+                            <td id="resultMaterial2"></td>
+                        </tr>
+                        <tr>
+                            <td>Warranty</td>
+                            <td id="resultWarranty1"></td>
+                            <td id="resultWarranty2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Durable Furnitures</h5>
+                    <p class="text-muted" >Premium furniture for your home and office. Quality craftsmanship meets timeless design.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="text-muted" href="index.html">Home</a></li>
+                        <li class="mb-2"><a class="text-muted" href="brand.html">Brands</a></li>
+                        <li class="mb-2"><a class="text-muted"  href="about.html">About Us</a></li>
+                        <li class="mb-2"><a class="text-muted" href="Collections.html">Collections</a></li>
+                        <li class="mb-2"><a class="text-muted"  href="compare.html">Compare</a></li>
+                        <li class="mb-2"><a class="text-muted"  href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="text-muted"  href="beds.html">Beds</a></li>
+                        <li class="mb-2"><a class="text-muted"  href="tables and chairs.html">Tables and Chairs </a></li>
+                        <li class="mb-2"><a class="text-muted"  href="sofa set.html">Sofa sets</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted" >Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-accent" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p><small class="text-muted" >We respect your privacy. Unsubscribe at any time.</small></p>
+                </div>
+            </div>
+            <div class="text-center copyright">
+                <p class="mb-0">&copy; 2025 Durable Furnitures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+ 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // Very simple product data
+        const products = {
+            sofa: {
+                name: "Luxury Sofa",
+                image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                price: "$1,199",
+                material: "Premium Leather",
+                warranty: "5 years"
+            },
+            bed: {
+                name: "Modern Bed",
+                image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                price: "$799",
+                material: "Solid Wood",
+                warranty: "3 years"
+            }
+        };
+
+        function compare() {
+            const product1 = document.getElementById('product1').value;
+            const product2 = document.getElementById('product2').value;
+            
+            if (!product1 || !product2) {
+                alert("Please select both products");
+                return;
+            }
+            
+            if (product1 === product2) {
+                alert("Please select two different products");
+                return;
+            }
+            
+            // Show product cards
+            showProduct('1', product1);
+            showProduct('2', product2);
+            
+            // Show comparison result
+            showComparison(product1, product2);
+        }
+        
+        function showProduct(num, productId) {
+            const product = products[productId];
+            const card = document.getElementById('card'+num);
+            
+            document.getElementById('img'+num).src = product.image;
+            document.getElementById('name'+num).textContent = product.name;
+            document.getElementById('price'+num).textContent = product.price;
+            document.getElementById('material'+num).textContent = product.material;
+            document.getElementById('warranty'+num).textContent = product.warranty;
+            
+            card.style.display = 'block';
+        }
+        
+        function showComparison(product1Id, product2Id) {
+            const product1 = products[product1Id];
+            const product2 = products[product2Id];
+            
+            document.getElementById('resultName1').textContent = product1.name;
+            document.getElementById('resultName2').textContent = product2.name;
+            
+            document.getElementById('resultPrice1').textContent = product1.price;
+            document.getElementById('resultPrice2').textContent = product2.price;
+            
+            document.getElementById('resultMaterial1').textContent = product1.material;
+            document.getElementById('resultMaterial2').textContent = product2.material;
+            
+            document.getElementById('resultWarranty1').textContent = product1.warranty;
+            document.getElementById('resultWarranty2').textContent = product2.warranty;
+            
+            // Highlight better warranty
+            if (parseInt(product1.warranty) > parseInt(product2.warranty)) {
+                document.getElementById('resultWarranty1').classList.add('highlight');
+            } else if (parseInt(product2.warranty) > parseInt(product1.warranty)) {
+                document.getElementById('resultWarranty2').classList.add('highlight');
+            }
+            
+            // Highlight lower price
+            if (parseInt(product1.price.replace(/\D/g,'')) < parseInt(product2.price.replace(/\D/g,''))) {
+                document.getElementById('resultPrice1').classList.add('highlight');
+            } else {
+                document.getElementById('resultPrice2').classList.add('highlight');
+            }
+            
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+     
+   
+</body>
+</html>
