@@ -507,3 +507,9 @@
                 font-size: 1rem;
             }
         }
+
+        .brandz{
+            list-style-type: none;
+            text-decoration: none;
+            color: var(--accent);
+        }
